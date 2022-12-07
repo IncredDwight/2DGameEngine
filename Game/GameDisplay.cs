@@ -3,7 +3,7 @@ namespace Game
 {
 	public class GameDisplay
 	{
-		public GameDisplay(GameField gameField)
+		public void Display(GameField gameField)
 		{
 			GameObject[,] field = gameField.GetGameField();
 			for (int y = 0; y < field.GetLength(0); y++)

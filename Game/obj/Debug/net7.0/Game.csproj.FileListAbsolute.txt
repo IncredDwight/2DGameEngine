@@ -1,0 +1,15 @@
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/bin/Debug/net7.0/Game
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/bin/Debug/net7.0/Game.deps.json
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/bin/Debug/net7.0/Game.runtimeconfig.json
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/bin/Debug/net7.0/Game.dll
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/bin/Debug/net7.0/Game.pdb
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/obj/Debug/net7.0/Game.csproj.AssemblyReference.cache
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/obj/Debug/net7.0/Game.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/obj/Debug/net7.0/Game.AssemblyInfoInputs.cache
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/obj/Debug/net7.0/Game.AssemblyInfo.cs
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/obj/Debug/net7.0/Game.csproj.CoreCompileInputs.cache
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/obj/Debug/net7.0/Game.dll
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/obj/Debug/net7.0/refint/Game.dll
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/obj/Debug/net7.0/Game.pdb
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/obj/Debug/net7.0/Game.genruntimeconfig.cache
+/Users/yaroslavvalchyshen/Desktop/Programming/GitHub/2DGameEngine/Game/obj/Debug/net7.0/ref/Game.dll

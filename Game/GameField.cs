@@ -28,11 +28,10 @@ namespace Game
             {
                 for (int x = 0; x < _field.GetLength(1); x++)
                 {
+					_field[x, y] = new GameObject();
 					for (int i = 0; i < _gameObjects.Count; i++)
 						if (_gameObjects[i].Position.X == x && _gameObjects[i].Position.Y == y)
 							_field[x, y] = _gameObjects[i];
-						else
-							_field[x, y] = new GameObject();
                 }
             }
         }

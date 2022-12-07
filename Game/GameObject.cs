@@ -17,6 +17,11 @@ namespace Game
 			Position = new Vector2(x, y);
 			View = view;
 		}
+
+		public virtual void Update()
+		{
+
+		}
 	}
 }
 

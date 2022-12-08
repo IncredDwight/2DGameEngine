@@ -6,11 +6,14 @@ namespace Game
     {
         public static void Main(string[] arg)
         {
-            GameField gameField = new GameField(new Vector2(10, 10));
+            GameField gameField = new GameField(new Vector2(15, 15));
+            MapBuilder mapBuilder = new MapBuilder();
             GameDisplay gameDisplay = new GameDisplay();
             GameLoop gameLoop = new GameLoop();
 
-            Player player = new Player(0, 0, '@', gameField);
+            mapBuilder.Build(gameField);
+
+            Player player = new Player(0, 1, '@', gameField);
             gameField.AddObject(new GameObject(4, 5, 'y', gameField));
             gameField.AddObject(new GameObject(1, 1, 'm', gameField));
             gameField.AddObject(new Enemy(2, 3, '*', gameField, 1));

@@ -22,7 +22,7 @@ namespace Game
 		public void Update()
 		{
 			for (int i = 0; i < _gameObjects.Count; i++)
-				_gameObjects[i].Update();
+				_gameObjects[i].Update(this);
 
             for (int y = 0; y < _field.GetLength(0); y++)
             {
@@ -39,6 +39,24 @@ namespace Game
 		public void AddObject(GameObject gameobject)
 		{
 			_gameObjects.Add(gameobject);
+		}
+
+		public void RemoveObject(GameObject gameObject)
+		{
+			_gameObjects.Remove(gameObject);
+		}
+
+		public bool IsFieldAvailable(int x, int y)
+		{
+			if (x > _field.GetLength(1) - 1 || x < 0)
+				return false;
+			if (y > _field.GetLength(0) - 1 || y < 0)
+				return false;
+
+            if (_field[x, y].IsSolid)
+                return false;
+
+            return true;
 		}
 
 		public GameObject[,] GetGameField()

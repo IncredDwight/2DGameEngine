@@ -9,8 +9,6 @@ namespace Game
 
             while (true)
 			{
-				
-
 				gameField.Update();
                 Console.Clear();
                 gameDisplay.Display(gameField);

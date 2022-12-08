@@ -5,20 +5,24 @@ namespace Game
 	{
 		public Vector2 Position;
 		public char View;
+		public bool IsSolid { get; protected set; }
 
 		public GameObject()
 		{
 			Position = new Vector2(0, 0);
-			View = ' '; 
+			View = ' ';
+			IsSolid = true;
 		}
 
-		public GameObject(int x, int y, char view)
+		public GameObject(int x, int y, char view, bool isSolid = true)
 		{
 			Position = new Vector2(x, y);
 			View = view;
+			IsSolid = true;
 		}
+		
 
-		public virtual void Update()
+		public virtual void Update(GameField gameField)
 		{
 
 		}

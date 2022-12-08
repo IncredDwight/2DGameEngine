@@ -4,25 +4,29 @@ namespace Game
 	public class GameObject
 	{
 		public Vector2 Position;
-		public char View;
+		public char View { get; protected set; }
 		public bool IsSolid { get; protected set; }
 
-		public GameObject()
+		protected GameField _gameField;
+
+		public GameObject(GameField gameField)
 		{
 			Position = new Vector2(0, 0);
 			View = ' ';
 			IsSolid = false;
+			_gameField = gameField;
 		}
 
-		public GameObject(int x, int y, char view, bool isSolid = true)
+		public GameObject(int x, int y, char view, GameField gameField, bool isSolid = true)
 		{
 			Position = new Vector2(x, y);
 			View = view;
 			IsSolid = isSolid;
+			_gameField = gameField;
 		}
 		
 
-		public virtual void Update(GameField gameField)
+		public virtual void Update()
 		{
 
 		}

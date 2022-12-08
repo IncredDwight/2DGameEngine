@@ -4,20 +4,16 @@ namespace Game
 	public class Player : GameObject
 	{
         public Health Health;
-        private GameField _gameField;
 
-
-
-		public Player(int x, int y, char view) : base(x, y, view)
+		public Player(int x, int y, char view, GameField gameField) : base(x, y, view, gameField)
 		{
             Health = new Health(5);
             IsSolid = false;
 		}
 
-        public override void Update(GameField gameField)
+        public override void Update()
         {
-            base.Update(gameField);
-            _gameField = gameField;
+            base.Update();
             GetInput();
         }
 
@@ -27,6 +23,7 @@ namespace Game
             if(collidedObject.GetType() == typeof(Enemy))
             {
                 Health.TakeDamage(1);
+                _gameField.RemoveObject(collidedObject);
             }
         }
 

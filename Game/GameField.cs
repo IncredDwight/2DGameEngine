@@ -14,7 +14,7 @@ namespace Game
 			{
 				for (int x = 0; x < _field.GetLength(1); x++)
 				{
-					_field[x, y] = new GameObject();
+					_field[x, y] = new GameObject(this);
 				}
 			}
 		}
@@ -23,7 +23,7 @@ namespace Game
 		{
 			for (int i = 0; i < _gameObjects.Count; i++)
 			{
-				_gameObjects[i].Update(this);
+				_gameObjects[i].Update();
 			}
 
 			for (int i = 0; i < _gameObjects.Count - 1; i++)
@@ -39,7 +39,7 @@ namespace Game
             {
                 for (int x = 0; x < _field.GetLength(1); x++)
                 {
-					_field[x, y] = new GameObject();
+					_field[x, y] = new GameObject(this);
 					for (int i = 0; i < _gameObjects.Count; i++)
 						if (_gameObjects[i].Position.X == x && _gameObjects[i].Position.Y == y)
 							_field[x, y] = _gameObjects[i];

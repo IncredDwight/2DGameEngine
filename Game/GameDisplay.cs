@@ -15,6 +15,10 @@ namespace Game
 				Console.WriteLine();
 			}
 		}
+		public void DisplayHealth(Player player)
+		{
+			Console.WriteLine($"Health: {player.Health.GetHealth()}");
+		}
 	}
 }
 

@@ -8,25 +8,27 @@ namespace Game
 		private Vector2 _startPosition;
 		private int _direction = 1;
 
-		private GameField _gameField;
-
 		public Enemy(int x, int y, char view, int range) : base(x, y, view)
 		{
 			_range = range;
 			_startPosition = new Vector2(x, y);
-			IsSolid = true;
+			IsSolid = false;
 		}
 
 		public override void Update(GameField gameField)
 		{
 			base.Update(gameField);
-			Move();
+			Move(gameField);
 		}
 		
-		private void Move()
+		private void Move(GameField gameField)
 		{
-			
-			Position.X+=_direction;
+			Vector2 nextPosition = new Vector2(Position.X, Position.Y);
+			nextPosition.X += _direction;
+
+			if (gameField.IsFieldAvailable(nextPosition.X, nextPosition.Y))
+				Position = nextPosition;
+
 			if (Position.X >= _startPosition.X + _range || Position.X <= _startPosition.X - _range)
 				_direction *= -1;
 		}

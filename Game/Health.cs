@@ -29,6 +29,11 @@ namespace Game
 				_health = _maxHealth;
 		}
 
+		public int GetHealth()
+		{
+			return _health;
+		}
+
 		private void Die()
 		{
 			Console.WriteLine("Death");

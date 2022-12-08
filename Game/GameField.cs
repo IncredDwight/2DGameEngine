@@ -22,7 +22,18 @@ namespace Game
 		public void Update()
 		{
 			for (int i = 0; i < _gameObjects.Count; i++)
+			{
 				_gameObjects[i].Update(this);
+			}
+
+			for (int i = 0; i < _gameObjects.Count - 1; i++)
+			{
+				if (_gameObjects[i].Position.X == _gameObjects[i + 1].Position.X && _gameObjects[i].Position.Y == _gameObjects[i + 1].Position.Y)
+				{
+					_gameObjects[i].OnCollision(_gameObjects[i + 1]);
+					_gameObjects[i + 1].OnCollision(_gameObjects[i]);
+				}
+			}
 
             for (int y = 0; y < _field.GetLength(0); y++)
             {

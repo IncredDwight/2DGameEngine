@@ -11,18 +11,23 @@ namespace Game
 		{
 			Position = new Vector2(0, 0);
 			View = ' ';
-			IsSolid = true;
+			IsSolid = false;
 		}
 
 		public GameObject(int x, int y, char view, bool isSolid = true)
 		{
 			Position = new Vector2(x, y);
 			View = view;
-			IsSolid = true;
+			IsSolid = isSolid;
 		}
 		
 
 		public virtual void Update(GameField gameField)
+		{
+
+		}
+
+		public virtual void OnCollision(GameObject collidedObject)
 		{
 
 		}

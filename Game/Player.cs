@@ -3,14 +3,15 @@ namespace Game
 {
 	public class Player : GameObject
 	{
-        private Health _health;
+        public Health Health;
         private GameField _gameField;
 
 
 
 		public Player(int x, int y, char view) : base(x, y, view)
 		{
-            _health = new Health(5);
+            Health = new Health(5);
+            IsSolid = false;
 		}
 
         public override void Update(GameField gameField)
@@ -18,6 +19,15 @@ namespace Game
             base.Update(gameField);
             _gameField = gameField;
             GetInput();
+        }
+
+        public override void OnCollision(GameObject collidedObject)
+        {
+            base.OnCollision(collidedObject);
+            if(collidedObject.GetType() == typeof(Enemy))
+            {
+                Health.TakeDamage(1);
+            }
         }
 
         private void GetInput()

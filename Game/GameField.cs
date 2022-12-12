@@ -24,15 +24,14 @@ namespace Game
 			for (int i = 0; i < _gameObjects.Count; i++)
 			{
 				_gameObjects[i].Update();
-			}
-
-			for (int i = 0; i < _gameObjects.Count - 1; i++)
-			{
-				if (_gameObjects[i].Position.X == _gameObjects[i + 1].Position.X && _gameObjects[i].Position.Y == _gameObjects[i + 1].Position.Y)
+				for (int j = 0; j < _gameObjects.Count - 1; j++)
 				{
-					_gameObjects[i].OnCollision(_gameObjects[i + 1]);
-					_gameObjects[i + 1].OnCollision(_gameObjects[i]);
-				}
+ 					if (_gameObjects[j].Position.X == _gameObjects[j + 1].Position.X && _gameObjects[j].Position.Y == _gameObjects[j + 1].Position.Y)
+					{
+						_gameObjects[j].OnCollision(_gameObjects[j + 1]);
+						_gameObjects[j + 1].OnCollision(_gameObjects[j]);
+					}
+                }
 			}
 
             for (int y = 0; y < _field.GetLength(0); y++)

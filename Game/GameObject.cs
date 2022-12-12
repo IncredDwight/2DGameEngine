@@ -13,7 +13,6 @@ namespace Game
 		{
 			Position = new Vector2(0, 0);
 			View = ' ';
-			IsSolid = false;
 			_gameField = gameField;
 		}
 
@@ -24,9 +23,14 @@ namespace Game
 			IsSolid = isSolid;
 			_gameField = gameField;
 		}
-		
 
-		public virtual void Update()
+		public GameObject(int x, int y, GameField gameField)
+		{
+			Position = new Vector2(x, y);
+			_gameField = gameField;
+		}
+
+        public virtual void Update()
 		{
 
 		}

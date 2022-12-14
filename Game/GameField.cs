@@ -21,17 +21,20 @@ namespace Game
 
 		public void Update()
 		{
-			for (int i = 0; i < _gameObjects.Count; i++)
+			GameObject[] gameObjects = _gameObjects.ToArray();
+			for (int i = 0; i < gameObjects.Length; i++)
 			{
-				_gameObjects[i].Update();
-				for (int j = 0; j < _gameObjects.Count - 1; j++)
+				gameObjects[i].Update();
+				for (int j = i + 1; j < gameObjects.Length; j++)
 				{
- 					if (_gameObjects[j].Position.X == _gameObjects[j + 1].Position.X && _gameObjects[j].Position.Y == _gameObjects[j + 1].Position.Y)
+ 					if (gameObjects[i].Position.X == gameObjects[j].Position.X && gameObjects[i].Position.Y == gameObjects[j].Position.Y)
 					{
-						_gameObjects[j].OnCollision(_gameObjects[j + 1]);
-						_gameObjects[j + 1].OnCollision(_gameObjects[j]);
+						gameObjects[i].OnCollision(gameObjects[j]);
+						gameObjects[j].OnCollision(gameObjects[i]);
 					}
                 }
+				
+				
 			}
 
             for (int y = 0; y < _field.GetLength(0); y++)

@@ -14,7 +14,6 @@ namespace Game
         public override void OnCollision(GameObject collidedObject)
         {
             base.OnCollision(collidedObject);
-			_gameField.RemoveObject(collidedObject);
 			if(collidedObject.GetType() == typeof(Player))
 			{
 				Player player = (Player)collidedObject;

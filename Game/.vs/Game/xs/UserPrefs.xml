@@ -1,22 +1,21 @@
 ﻿<Properties StartupConfiguration="{365034A7-825D-4C4D-896B-AEEAF5FB957B}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Game PreferredExecutionTarget="MonoDevelop.Default" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Game PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="GameField.cs">
     <Files>
-      <File FileName="Program.cs" Line="15" Column="1" />
-      <File FileName="GameObject.cs" />
-      <File FileName="Vector2.cs" Line="1" Column="1" />
-      <File FileName="GameField.cs" Line="34" Column="18" />
-      <File FileName="GameDisplay.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="17" Column="15" />
       <File FileName="Player.cs" />
+      <File FileName="GameObject.cs" />
+      <File FileName="Vector2.cs" />
+      <File FileName="GameField.cs" Line="35" Column="7" />
+      <File FileName="GameDisplay.cs" Line="1" Column="1" />
       <File FileName="Enemy.cs" />
       <File FileName="Health.cs" />
-      <File FileName="GameLoop.cs" />
-      <File FileName="MapBuilder.cs" />
+      <File FileName="GameLoop.cs" Line="1" Column="1" />
+      <File FileName="MapBuilder.cs" Line="1" Column="1" />
       <File FileName="Heal.cs" />
     </Files>
     <Pads>
@@ -31,5 +30,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

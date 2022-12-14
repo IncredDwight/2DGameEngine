@@ -3,6 +3,8 @@ namespace Game
 {
 	public class Health
 	{
+		public Action<int> OnHealthChanged;
+
 		private int _maxHealth;
 		private int _health;
 
@@ -20,6 +22,7 @@ namespace Game
 				_health = 0;
 				Die();
 			}
+			OnHealthChanged?.Invoke(_health);
 		}
 
 		public void Heal(int heal)
@@ -27,6 +30,7 @@ namespace Game
 			_health += heal;
 			if (_health > _maxHealth)
 				_health = _maxHealth;
+			OnHealthChanged?.Invoke(_health);
 		}
 
 		public int GetHealth()

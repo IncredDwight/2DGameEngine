@@ -27,9 +27,9 @@ namespace Game
             }
         }
 
-        private void GetInput()
+        private async void GetInput()
         {
-            string input = Console.ReadLine();
+            string input = await Task.Run(() => Console.ReadLine());// Console.ReadLine();
             Vector2 nextPosition = new Vector2(Position.X, Position.Y);
             
 

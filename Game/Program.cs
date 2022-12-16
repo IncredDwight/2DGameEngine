@@ -6,7 +6,7 @@ namespace Game
     {
         public static void Main(string[] arg)
         {
-            GameField gameField = new GameField(new Vector2(15, 15));
+            GameField gameField = new GameField(new Vector2(20, 20));
             MapBuilder mapBuilder = new MapBuilder();
             GameDisplay gameDisplay = new GameDisplay();
             GameLoop gameLoop = new GameLoop();
@@ -15,14 +15,12 @@ namespace Game
 
             Player player = new Player(1, 1, '@', gameField);
             Camera camera = new Camera(0, 0, ' ', gameField, player);
-            //gameField.AddObject(new GameObject(4, 5, 'y', gameField));
-            //gameField.AddObject(new GameObject(1, 1, 'm', gameField));
+
             gameField.AddObject(new Enemy(3, 3, '*', gameField, 1));
-            gameField.AddObject(new Heal(5, 5, gameField, 1));
-            gameField.AddObject(new Heal(8, 5, gameField, 1));
-            gameField.AddObject(new Enemy(2, 3, '*', gameField, 1));
-            gameField.AddObject(new Enemy(6, 4, 'o', gameField, 1));
-            //gameField.AddObject(new GameObject(8, 8, 'm', gameField));
+            gameField.AddObject(new Enemy(7, 7, '*', gameField, 1));
+            gameField.AddObject(new Enemy(11, 15, '*', gameField, 1));
+            gameField.AddObject(new Heal(11, 5, gameField, 1));
+            gameField.AddObject(new Heal(3, 14, gameField, 1));
 
 
             gameField.AddObject(camera);

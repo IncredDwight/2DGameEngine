@@ -11,6 +11,8 @@ namespace Game
             while (true)
 			{
 				gameField.Update();
+				//await Task.Delay(8);
+				System.Threading.Thread.Sleep(8);
                 Console.Clear();
                 gameDisplay.DisplayHealth(player);
                 gameDisplay.Display(gameField, camera);

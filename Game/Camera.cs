@@ -12,7 +12,7 @@ namespace Game
             _target = target;
 
             IsSolid = false;
-            Size = 5;
+            Size = 6;
 		}
 
         public override void Update()

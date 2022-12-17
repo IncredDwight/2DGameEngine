@@ -6,7 +6,7 @@ namespace Game
     {
         public static void Main(string[] arg)
         {
-            GameField gameField = new GameField(new Vector2(20, 20));
+            GameField gameField = new GameField(new Vector2(60, 60));
             MapBuilder mapBuilder = new MapBuilder();
             GameDisplay gameDisplay = new GameDisplay();
             GameLoop gameLoop = new GameLoop();

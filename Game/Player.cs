@@ -5,15 +5,22 @@ namespace Game
 	{
         public Health Health;
 
+        private Rigidbody _rigidbody;
+
 		public Player(int x, int y, char view, GameField gameField) : base(x, y, view, gameField)
 		{
             Health = new Health(5);
+            _rigidbody = new Rigidbody(Position);
             IsSolid = false;
 		}
 
         public override void Update()
         {
             base.Update();
+            //Position.X += _rigidbody.Velocity.X;
+            //Position.Y -= _rigidbody.Velocity.Y;
+            //Console.WriteLine(Position.Y);
+            //Console.ReadLine();
             GetInput();
         }
 
@@ -36,21 +43,28 @@ namespace Game
             switch (input)
             {
                 case "w":
-                    nextPosition.Y--;
+                    _rigidbody.Velocity.Y = 5;
+                    //nextPosition.Y--;
                     break;
                 case "s":
-                    nextPosition.Y++;
+                    _rigidbody.Velocity.Y = -1;
+                    //nextPosition.Y++;
                     break;
                 case "d":
-                    nextPosition.X++;
+                    _rigidbody.Velocity.X = 1;
+                    //nextPosition.X++;
                     break;
                 case "a":
-                    nextPosition.X--;
+                    _rigidbody.Velocity.X = -1;
+                    //nextPosition.X--;
                     break;
             }
 
             if (_gameField.IsFieldAvailable(nextPosition.X, nextPosition.Y))
-                Position = nextPosition;
+            {
+                Position.X = nextPosition.X;
+                Position.Y = nextPosition.Y;
+            }
 
         }
     }

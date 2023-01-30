@@ -1,37 +1,36 @@
 ﻿<Properties StartupConfiguration="{365034A7-825D-4C4D-896B-AEEAF5FB957B}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Heal.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Game PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Player.cs" Line="21" Column="15" />
-      <File FileName="GameObject.cs" />
+      <File FileName="Player.cs" />
+      <File FileName="GameObject.cs" Line="52" Column="1" />
       <File FileName="Heal.cs" Line="21" Column="35" />
-      <File FileName="Vector2.cs" />
-      <File FileName="GameField.cs" />
-      <File FileName="GameLoop.cs" />
-      <File FileName="GameDisplay.cs" />
-      <File FileName="Enemy.cs" />
-      <File FileName="Health.cs" />
-      <File FileName="MapBuilder.cs" />
+      <File FileName="Vector2.cs" Line="17" Column="10" />
+      <File FileName="GameField.cs" Line="82" Column="24" />
+      <File FileName="GameLoop.cs" Line="18" Column="38" />
+      <File FileName="GameDisplay.cs" Line="25" Column="4" />
+      <File FileName="Enemy.cs" Line="29" Column="62" />
+      <File FileName="Health.cs" Line="11" Column="10" />
+      <File FileName="MapBuilder.cs" Line="30" Column="71" />
       <File FileName="Camera.cs" />
       <File FileName="Program.cs" />
       <File FileName="Rigidbody.cs" />
+      <File FileName="Vector2F.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Game" expanded="True">
-            <Node name="Game" expanded="True">
-              <Node name="Heal.cs" selected="True" />
-            </Node>
+            <Node name="Game" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Game PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

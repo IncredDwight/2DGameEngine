@@ -43,7 +43,7 @@ namespace Game
                 {
 					_field[x, y] = new GameObject(this);
 					for (int i = 0; i < _gameObjects.Count; i++)
-						if (_gameObjects[i].Position.X == x && _gameObjects[i].Position.Y == y)
+						if ((int)_gameObjects[i].Position.X == x && (int)_gameObjects[i].Position.Y == y)
 							_field[x, y] = _gameObjects[i];
                 }
             }
@@ -75,6 +75,11 @@ namespace Game
 		public GameObject[,] GetGameField()
 		{
 			return _field;
+		}
+
+		public GameObject GetObject(int x, int y)
+		{
+			return _field[x, y];
 		}
 	}
 }

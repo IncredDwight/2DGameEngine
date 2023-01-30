@@ -23,10 +23,10 @@ namespace Game
 		
 		private void Move()
 		{
-			Vector2 nextPosition = new Vector2(Position.X, Position.Y);
+			Vector2F nextPosition = new Vector2F(Position.X, Position.Y);
 			nextPosition.X += _direction;
 
-			if (_gameField.IsFieldAvailable(nextPosition.X, nextPosition.Y))
+			if (_gameField.IsFieldAvailable((int)nextPosition.X, (int)nextPosition.Y))
 				Position = nextPosition;
 
 			if (Position.X >= _startPosition.X + _range || Position.X <= _startPosition.X - _range)

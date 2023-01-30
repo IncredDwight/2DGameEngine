@@ -37,30 +37,31 @@ namespace Game
         private async void GetInput()
         {
             string input = await Task.Run(() => Console.ReadLine());// Console.ReadLine();
-            Vector2 nextPosition = new Vector2(Position.X, Position.Y);
+            Vector2F nextPosition = new Vector2F(Position.X, Position.Y);
             
 
             switch (input)
             {
                 case "w":
-                    _rigidbody.Velocity.Y = 5;
+                    _rigidbody.Velocity.Y = 6;
                     //nextPosition.Y--;
                     break;
                 case "s":
-                    _rigidbody.Velocity.Y = -1;
+                    _rigidbody.Velocity.Y = -6;
                     //nextPosition.Y++;
                     break;
                 case "d":
-                    _rigidbody.Velocity.X = 1;
+                    _rigidbody.Velocity.X = 6;
                     //nextPosition.X++;
                     break;
                 case "a":
-                    _rigidbody.Velocity.X = -1;
+                    _rigidbody.Velocity.X = -6;
                     //nextPosition.X--;
                     break;
             }
 
-            if (_gameField.IsFieldAvailable(nextPosition.X, nextPosition.Y))
+
+            if (_gameField.IsFieldAvailable((int)nextPosition.X, (int)nextPosition.Y))
             {
                 Position.X = nextPosition.X;
                 Position.Y = nextPosition.Y;

@@ -3,18 +3,18 @@ namespace Game
 {
 	public class Rigidbody
 	{
-		public Vector2 Velocity;
-		private Vector2 _position;
+		public Vector2F Velocity;
+		private Vector2F _position;
 
-		private Vector2 _acceleration;
-		private int _mass = 1;
+		private Vector2F _acceleration;
+		private float _mass = 1;
 
-		public Rigidbody(Vector2 position)
+		public Rigidbody(Vector2F position)
 		{
-			Velocity = new Vector2();
+			Velocity = new Vector2F();
 			_position = position;
 
-			_acceleration = new Vector2();
+			_acceleration = new Vector2F();
 			Start();
 		}
 
@@ -24,13 +24,15 @@ namespace Game
 			{
 				while (true)
 				{
-					Vector2 gravity = new Vector2(0, -1);
-					_acceleration = new Vector2(gravity.X / _mass, gravity.Y / _mass);
+					float time = 0.1f;
+					Vector2F gravity = new Vector2F(0, -9.8f);
+					_acceleration = new Vector2F(gravity.X / _mass, gravity.Y / _mass);
 
-					Velocity.X += _acceleration.X;
-					Velocity.Y += _acceleration.Y;
-					_position.X += Velocity.X;
-					_position.Y -= Velocity.Y;
+					Velocity.X += _acceleration.X * time;
+					Velocity.Y += _acceleration.Y * time;
+					_position.X += Velocity.X * time;
+					_position.Y -= Velocity.Y * time;
+					//Console.WriteLine(_position.X);
 					Task.Delay(100).Wait();
 				}
 			});
